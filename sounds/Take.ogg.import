@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Take.ogg-eea28db4172d941bbb893d7cee935d47.oggstr"
+
+[deps]
+
+source_file="res://sounds/Take.ogg"
+dest_files=[ "res://.import/Take.ogg-eea28db4172d941bbb893d7cee935d47.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

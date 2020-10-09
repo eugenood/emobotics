@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Failing.ogg-7db01918da1dc28cd7f0aefb43165056.oggstr"
+
+[deps]
+
+source_file="res://sounds/Failing.ogg"
+dest_files=[ "res://.import/Failing.ogg-7db01918da1dc28cd7f0aefb43165056.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

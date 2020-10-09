@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #555555;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0 auto;
+  width: 760px;
+}
+
+input {
+  line-height: 22px;
+}
+
+h1 {
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+
+select {
+  background: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border: 1px solid #095484;
+  outline: none;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ccc;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 15px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 10%;
+}
+
+textarea {
+  width: calc(100% - 20px);
+}
+
+button {
+  background-color: #095484;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  width: 150px;
+}
+
+button:hover {
+  background-color: #0666a3;
+}
+
+canvas {
+	background-color: #000000;
+  margin: 20px -20px;
+}
+
+.main {
+  background: #fff;
+  box-shadow: 0 2px 5px #ccc;
+  min-height: calc(100vh - 40px);
+  padding: 20px;
+  width: 100%;
+}
+
+.first-col {
+  text-align: right;
+  width: 20%;
+}
+
+.last-col {
+  text-align: left;
+  width: 20%;
+}
+
+.question-col {
+  text-align: left;
+  width: 30%;
+}
+
+.new-section {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.btn-block {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#status {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	height: 600px;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 115px;
+	visibility: hidden;
+}
+
+#status-progress {
+	background-color: #222222;
+	border-radius: 10px;
+	height: 10px;
+	padding: 2px;
+	visibility: visible;
+	width: 244px;
+}
+
+#status-progress-inner {
+	background-color: #ffffff;
+	border-radius: 10px;
+	height: 100%;
+	transition: width 0.5s linear;
+	width: 0;
+}

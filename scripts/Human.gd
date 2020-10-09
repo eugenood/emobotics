@@ -1,0 +1,71 @@
+extends KinematicBody
+
+const MOUSE_SENSITIVITY = 0.002
+const MOVEMENT_SPEED = 1.5
+const TOTAL_DISTANCE_TILL_FOOTSTEP = 50.0
+
+onready var eye_camera = $EyeCamera
+onready var eye_ray = $EyeCamera/EyeRay
+onready var hand_spatial = $HandSpatial
+onready var footstep_audio = $FootstepAudio
+onready var take_audio = $TakeAudio
+onready var drop_audio = $DropAudio
+onready var wait_timer = $WaitTimer
+
+var distance_till_footstep = TOTAL_DISTANCE_TILL_FOOTSTEP
+var can_move = true
+var can_pan = true
+
+func _ready():
+	wait_timer.connect("timeout", self, "release")
+
+func _input(event):
+	if can_pan and (event is InputEventMouseMotion or event is InputEventScreenDrag):
+		rotation.y -= event.relative.x * MOUSE_SENSITIVITY
+		eye_camera.rotation.x -= event.relative.y * MOUSE_SENSITIVITY
+		eye_camera.rotation.x = clamp(eye_camera.rotation.x, -1.2, 1.2)
+	if can_move and event.is_action_pressed("interact"):
+		var collider = eye_ray.get_collider()
+		if collider and collider.has_method("interact"):
+			eye_ray.get_collider().interact(self)
+
+func _physics_process(delta):
+	if can_move:
+		var direction = Vector3(0, 0, 0)
+		if Input.is_action_pressed("move_north"):
+			direction.z -= 1
+		if Input.is_action_pressed("move_south"):
+			direction.z += 1
+		if Input.is_action_pressed("move_east"):
+			direction.x += 1
+		if Input.is_action_pressed("move_west"):
+			direction.x -= 1
+		direction = direction.rotated(Vector3.UP, rotation.y).normalized()
+		distance_till_footstep -= move_and_slide(direction * MOVEMENT_SPEED).length()
+		if distance_till_footstep < 0.0:
+			footstep_audio.play()
+			distance_till_footstep = TOTAL_DISTANCE_TILL_FOOTSTEP
+
+func wait(time):
+	wait_timer.wait_time = time
+	wait_timer.start()
+	can_move = false
+	can_pan = false
+
+func release():
+	wait_timer.stop()
+	can_move = true
+	can_pan = true
+
+func take(plate):
+	hand_spatial.add_child(plate)
+	take_audio.play()
+
+func drop():
+	var plate = hand_spatial.get_children()[0]
+	hand_spatial.remove_child(plate)
+	drop_audio.play()
+	return plate
+
+func is_holding_plate():
+	return hand_spatial.get_child_count() > 0

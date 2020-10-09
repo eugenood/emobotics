@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <link id="-gd-engine-icon" rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="emobotics.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="main" style="position: relative;">
+      <h1>emobotics</h1>
+      <p>Thank you for taking part in this experiment.</p>
+      <div id="canvas-container">
+        <canvas id="canvas" width="800px" height="600px">
+          HTML5 canvas appears to be unsupported in the current browser.<br />
+          Please try updating or use a different browser.
+        </canvas>
+        <div id="status">
+          <div id="status-progress" style="display: none;" oncontextmenu="event.preventDefault();">
+            <div id="status-progress-inner"></div>
+          </div>
+        </div>
+      </div>
+      <p id="timestamps"><b>Timestamps</b></p>
+    </div>
+
+    <script type="text/javascript" src="emobotics.js"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+
+      var engine = new Engine();
+
+      (function() {
+        const EXECUTABLE_NAME = "emobotics";
+        const MAIN_PACK = "emobotics.pck";
+        const DEBUG_ENABLED = false && false;
+
+        var container = document.getElementById("container");
+        var canvas = document.getElementById("canvas");
+        var statusProgress = document.getElementById("status-progress");
+        var statusProgressInner = document.getElementById("status-progress-inner");
+
+        var initializing = true;
+        var statusMode = "hidden";
+
+        function setStatusMode(mode) {
+          if (statusMode === mode || !initializing) return;
+          switch (mode) {
+            case "progress":
+              statusProgress.style.display = "block";
+              break;
+            case "hidden":
+              statusProgress.style.display = "none";
+              break;
+            default:
+              throw new Error("Invalid status mode");
+          }
+          statusMode = mode;
+        }
+        
+        engine.setProgressFunc((current, total) => {
+          if (total > 0) {
+            statusProgressInner.style.width = (current / total) * 100 + "%";
+            setStatusMode("progress");
+          }
+        });
+        
+        if (Engine.isWebGLAvailable()) {
+          setStatusMode("progress");
+          engine.setCanvas(canvas);
+          engine.startGame(EXECUTABLE_NAME, MAIN_PACK).then(() => {
+            setStatusMode("hidden");
+            initializing = false;
+          });
+        }
+      })();
+      //]]>
+    </script>
+  </body>
+</html>
+
+
