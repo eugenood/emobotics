@@ -7,3 +7,6 @@ func interact(human):
 		get_parent().remove_child(self)
 		human.take(self)
 		can_interact = false
+
+func set_highlight(is_highlight):
+	$PanMesh/PanOutline.visible = is_highlight

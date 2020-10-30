@@ -4,6 +4,8 @@ const MOUSE_SENSITIVITY = 0.002
 const MOVEMENT_SPEED = 1.5
 const TOTAL_DISTANCE_TILL_FOOTSTEP = 50.0
 
+export(Array, NodePath) var highlightable_paths
+
 onready var eye_camera = $EyeCamera
 onready var eye_ray = $EyeCamera/EyeRay
 onready var hand_spatial = $HandSpatial
@@ -16,8 +18,12 @@ var distance_till_footstep = TOTAL_DISTANCE_TILL_FOOTSTEP
 var can_move = true
 var can_pan = true
 
+var highlightables = []
+
 func _ready():
 	wait_timer.connect("timeout", self, "release")
+	for highlightable_path in highlightable_paths:
+		highlightables.append(get_node(highlightable_path))
 
 func _input(event):
 	if can_pan and (event is InputEventMouseMotion or event is InputEventScreenDrag):
@@ -28,6 +34,11 @@ func _input(event):
 		var collider = eye_ray.get_collider()
 		if collider and collider.has_method("interact"):
 			eye_ray.get_collider().interact(self)
+
+func _process(delta):
+	var collider = eye_ray.get_collider()
+	for highlightable in highlightables:
+		highlightable.set_highlight(collider == highlightable)
 
 func _physics_process(delta):
 	if can_move:

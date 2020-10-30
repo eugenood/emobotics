@@ -12,3 +12,6 @@ func interact(human):
 func take(pan, from):
 	emit_signal("delivered")
 	pan_spatial.add_child(pan)
+
+func set_highlight(is_highlight):
+	$StoveMesh/StoveOutline.visible = is_highlight

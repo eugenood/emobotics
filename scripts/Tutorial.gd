@@ -59,7 +59,6 @@ func _step_4():
 	is_waiting_lookaround = false
 	is_waiting_shelf = true
 	human.can_move = true
-	human.eye_ray.cast_to.z = -1.5
 	instruction.text = "Good job. Now try using WASD to move towards the shelf."
 
 func _step_5():
@@ -74,10 +73,18 @@ func _step_6():
 
 func _step_7():
 	is_waiting_transfer = false
-	instruction.text = "Awesome. You will be moved to the experiment soon."
+	instruction.text = "Note that interactive objects are highlighted when you hover over it."
 	instruction_timer.connect("timeout", self, "_step_8")
 	instruction_timer.wait_time = WAIT_TIME
 	instruction_timer.start()
-
+	
 func _step_8():
+	is_waiting_transfer = false
+	instruction.text = "Good job. You will now be moved to the experiment room."
+	instruction_timer.disconnect("timeout", self, "_step_8")
+	instruction_timer.connect("timeout", self, "_step_9")
+	instruction_timer.wait_time = WAIT_TIME
+	instruction_timer.start()
+
+func _step_9():
 	get_tree().change_scene("res://scenes/Experiment.tscn")

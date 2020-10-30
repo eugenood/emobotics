@@ -28,3 +28,6 @@ func take(plate, from):
 	plate_spatials[num_plates].add_child(plate)
 	JavaScript.eval("document.getElementById('timestamps').innerHTML += '<br>time[%d] = %.2fs (by %s)'" % [num_plates, time_so_far, from])
 	num_plates += 1
+	
+func set_highlight(is_highlight):
+	$SinkMesh/SinkOutline.visible = is_highlight

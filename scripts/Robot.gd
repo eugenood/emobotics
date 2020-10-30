@@ -113,3 +113,14 @@ func drop():
 	var plate = hand_spatial.get_children()[0]
 	hand_spatial.remove_child(plate)
 	return plate
+
+func set_highlight(is_highlight):
+	$RobotMesh/RobotOutline.visible = is_highlight
+	$RobotMesh/Segment1/Outline1.visible = is_highlight
+	$RobotMesh/Segment1/Segment2/Outline2.visible = is_highlight
+	$RobotMesh/Segment1/Segment2/Segment3/Outline3.visible = is_highlight
+	$RobotMesh/Segment1/Segment2/Segment3/Segment4/Outline4.visible = is_highlight
+	$RobotMesh/Segment1/Segment2/Segment3/Segment4/Segment5/Outline5.visible = is_highlight
+	$RobotMesh/Segment1/Segment2/Segment3/Segment4/Segment5/Segment6/Outline6.visible = is_highlight
+	$RobotMesh/Segment1/Segment2/Segment3/Segment4/Segment5/Segment6/Segment7/Outline7.visible = is_highlight
+	$RobotMesh/Segment1/Segment2/Segment3/Segment4/Segment5/Segment6/Segment7/Segment8/Outline8.visible = is_highlight
