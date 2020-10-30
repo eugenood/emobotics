@@ -57,15 +57,15 @@ func release():
 	can_move = true
 	can_pan = true
 
-func take(plate):
-	hand_spatial.add_child(plate)
+func take(item):
+	hand_spatial.add_child(item)
 	take_audio.play()
 
 func drop():
-	var plate = hand_spatial.get_children()[0]
-	hand_spatial.remove_child(plate)
+	var item = hand_spatial.get_children()[0]
+	hand_spatial.remove_child(item)
 	drop_audio.play()
-	return plate
+	return item
 
-func is_holding_plate():
+func is_holding_item():
 	return hand_spatial.get_child_count() > 0

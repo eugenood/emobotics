@@ -100,7 +100,7 @@ func _show_emotion(emotion):
 			robot_emote.texture = wink_emote
 
 func interact(human):
-	if human.is_holding_plate() and not is_delivering:
+	if human.is_holding_item() and not is_delivering:
 		_deliver_for(human)
 	if is_failing:
 		_fixed_by(human)

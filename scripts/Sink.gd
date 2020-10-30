@@ -19,7 +19,7 @@ func _process(delta):
 	time_so_far += delta
 
 func interact(human):
-	if human.is_holding_plate():
+	if human.is_holding_item():
 		var plate = human.drop()
 		take(plate, "human")
 
