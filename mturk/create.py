@@ -11,9 +11,9 @@ question = open('question.xml', 'r').read()
 
 new_hit = client.create_hit(
     MaxAssignments=200,
-    AutoApprovalDelayInSeconds=36000,
-    LifetimeInSeconds=36000,
-    AssignmentDurationInSeconds=3600,
+    AutoApprovalDelayInSeconds=0,
+    LifetimeInSeconds=1200,
+    AssignmentDurationInSeconds=600,
     Reward='0.01',
     Title='Emotion and Robotics',
     Keywords='emotion, robotics',

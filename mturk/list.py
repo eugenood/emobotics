@@ -8,7 +8,4 @@ client = boto3.client('mturk',
     region_name='us-east-1',
     endpoint_url='https://mturk-requester-sandbox.us-east-1.amazonaws.com')
 
-hit = client.list_hits()['HITs'][0]
-
-client.update_expiration_for_hit(HITId=hit['HITId'], ExpireAt=datetime.datetime(2015, 1, 1))
-client.delete_hit(HITId=hit['HITId'])
+print(client.list_hits())
