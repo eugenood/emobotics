@@ -10,7 +10,7 @@ client = boto3.client('mturk',
 question = open('question.xml', 'r').read()
 
 new_hit = client.create_hit(
-    MaxAssignments=200,
+    MaxAssignments=1,
     AutoApprovalDelayInSeconds=0,
     LifetimeInSeconds=1200,
     AssignmentDurationInSeconds=600,
