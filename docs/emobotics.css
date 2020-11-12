@@ -11,11 +11,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   margin: 0 auto;
-  width: 760px;
-}
-
-input {
-  line-height: 22px;
+  width: 800px;
 }
 
 h1 {
@@ -33,6 +29,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 10px;
+  line-height: 22px;
   width: calc(100% - 20px);
 }
 
@@ -86,15 +83,13 @@ button:hover {
 }
 
 canvas {
-	background-color: #000000;
-  margin: 20px -20px;
+  background-color: #000000;
 }
 
 .main {
   background: #fff;
   box-shadow: 0 2px 5px #ccc;
-  min-height: calc(100vh - 40px);
-  padding: 20px;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -124,31 +119,35 @@ canvas {
 }
 
 #status {
-	align-items: center;
-	bottom: 0;
-	display: flex;
-	height: 600px;
-	justify-content: center;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 115px;
-	visibility: hidden;
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 115px;
+  visibility: hidden;
 }
 
 #status-progress {
-	background-color: #222222;
-	border-radius: 10px;
-	height: 10px;
-	padding: 2px;
-	visibility: visible;
-	width: 244px;
+  background-color: #222222;
+  border-radius: 10px;
+  height: 10px;
+  padding: 2px;
+  visibility: visible;
+  width: 244px;
 }
 
 #status-progress-inner {
-	background-color: #ffffff;
-	border-radius: 10px;
-	height: 100%;
-	transition: width 0.5s linear;
-	width: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 100%;
+  transition: width 0.5s linear;
+  width: 0;
+}
+
+#information {
+  padding: 20px;
 }

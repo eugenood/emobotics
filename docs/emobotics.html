@@ -8,8 +8,6 @@
   </head>
   <body>
     <div class="main" style="position: relative;">
-      <h1>emobotics</h1>
-      <p>Thank you for taking part in this experiment.</p>
       <div id="canvas-container">
         <canvas id="canvas" width="800px" height="600px">
           HTML5 canvas appears to be unsupported in the current browser.<br />
@@ -21,13 +19,21 @@
           </div>
         </div>
       </div>
-      <p id="timestamps"><b>Timestamps</b></p>
+      <p id="information"><b>Information</b></p>
     </div>
 
     <script type="text/javascript" src="emobotics.js"></script>
     <script type="text/javascript">
       //<![CDATA[
-
+      function get(name){
+        if (name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search)) {
+          return decodeURIComponent(name[1]);
+        } else {
+          return "none";
+        }
+      }
+      
+      document.getElementById("information").innerHTML += "<br>HitID: " + get("hitId");
       var engine = new Engine();
 
       (function() {
