@@ -2,6 +2,7 @@ import boto3
 import config
 import datetime
 import sys
+import xmltodict
 
 client = boto3.client('mturk',
     aws_access_key_id=config.aws_access_key_id,
@@ -9,4 +10,18 @@ client = boto3.client('mturk',
     region_name='us-east-1',
     endpoint_url='https://mturk-requester-sandbox.us-east-1.amazonaws.com')
 
-print(client.list_assignments_for_hit(HITId=sys.argv[1]))
+assignments = client.list_assignments_for_hit(HITId=sys.argv[1])['Assignments']
+
+csv_output = ''
+
+for assignment in assignments:
+    answers = xmltodict.parse(assignment['Answer'])['QuestionFormAnswers']['Answer']
+    if not csv_output:
+        for answer in answers[:-1]:
+            csv_output += answer['QuestionIdentifier'] + ','
+        csv_output += answers[-1]['QuestionIdentifier'] + '\n'
+    for answer in answers[:-1]:
+        csv_output += answer['FreeText'] + ','
+    csv_output += answers[-1]['FreeText'] + '\n'
+
+print(csv_output)

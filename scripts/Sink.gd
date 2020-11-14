@@ -4,6 +4,9 @@ signal delivered
 
 var plate_spatials = []
 
+var timestamps = []
+var froms = []
+
 var num_plates = 0
 var time_so_far = 0
 
@@ -26,7 +29,8 @@ func interact(human):
 func take(plate, from):
 	emit_signal("delivered")
 	plate_spatials[num_plates].add_child(plate)
-	JavaScript.eval("document.getElementById('timestamps').innerHTML += '<br>time[%d] = %.2fs (by %s)'" % [num_plates, time_so_far, from])
+	timestamps.append(time_so_far)
+	froms.append(from)
 	num_plates += 1
 	
 func set_highlight(is_highlight):
