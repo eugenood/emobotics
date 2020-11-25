@@ -8,32 +8,6 @@
   </head>
   <body>
     <form class="main" action="https://workersandbox.mturk.com/mturk/externalSubmit">
-      <h4>Assignment ID</h4>
-      <input id="assignmentId" readonly name="assignmentId" />
-      <h4>Timestamp 0</h4>
-      <input id="timestamp0" readonly name="timestamp0" />
-      <h4>From 0</h4>
-      <input id="from0" readonly name="from0" />
-      <h4>Timestamp 1</h4>
-      <input id="timestamp1" readonly name="timestamp1" />
-      <h4>From 1</h4>
-      <input id="from1" readonly name="from1" />
-      <h4>Timestamp 2</h4>
-      <input id="timestamp2" readonly name="timestamp2" />
-      <h4>From 2</h4>
-      <input id="from2" readonly name="from2" />
-      <h4>Timestamp 3</h4>
-      <input id="timestamp3" readonly name="timestamp3" />
-      <h4>From 3</h4>
-      <input id="from3" readonly name="from3" />
-      <h4>Timestamp 4</h4>
-      <input id="timestamp4" readonly name="timestamp4" />
-      <h4>From 4</h4>
-      <input id="from4" readonly name="from4" />
-      <h4>Timestamp 5</h4>
-      <input id="timestamp5" readonly name="timestamp5" />
-      <h4>From 5</h4>
-      <input id="from5" readonly name="from5" />
       <h4>Gender</h4>
       <select>
         <option class="disabled" value="location" disabled selected></option>
@@ -276,8 +250,36 @@
           <td><input type="radio" value="5" name="unusualConfident" /></td>
         </tr>
       </table>
-      <h4 class="new-section">Any comments, questions or suggestions?</h4>
-      <textarea rows="5"></textarea>
+      <h4>Assignment ID</h4>
+      <input id="assignmentId" readonly name="assignmentId" />
+      <h4>Timestamp 0</h4>
+      <input id="timestamp0" readonly name="timestamp0" />
+      <h4>From 0</h4>
+      <input id="from0" readonly name="from0" />
+      <h4>Timestamp 1</h4>
+      <input id="timestamp1" readonly name="timestamp1" />
+      <h4>From 1</h4>
+      <input id="from1" readonly name="from1" />
+      <h4>Timestamp 2</h4>
+      <input id="timestamp2" readonly name="timestamp2" />
+      <h4>From 2</h4>
+      <input id="from2" readonly name="from2" />
+      <h4>Timestamp 3</h4>
+      <input id="timestamp3" readonly name="timestamp3" />
+      <h4>From 3</h4>
+      <input id="from3" readonly name="from3" />
+      <h4>Timestamp 4</h4>
+      <input id="timestamp4" readonly name="timestamp4" />
+      <h4>From 4</h4>
+      <input id="from4" readonly name="from4" />
+      <h4>Timestamp 5</h4>
+      <input id="timestamp5" readonly name="timestamp5" />
+      <h4>From 5</h4>
+      <input id="from5" readonly name="from5" />
+      <h4>Emotion</h4>
+      <input id="emotion" readonly name="emotion" />
+      <h4>FPS</h4>
+      <input id="fps" readonly name="fps" />
       <div class="btn-block">
         <button type="submit" href="/">Submit</button>
       </div>
@@ -304,6 +306,8 @@
       document.getElementById("from4").value = get("from4");
       document.getElementById("timestamp5").value = get("timestamp5");
       document.getElementById("from5").value = get("from5");
+      document.getElementById("emotion").value = get("emotion");
+      document.getElementById("fps").value = get("fps");
     </script>
   </body>
 </html>
