@@ -21,7 +21,8 @@ for assignment in assignments:
             csv_output += answer['QuestionIdentifier'] + ','
         csv_output += answers[-1]['QuestionIdentifier'] + '\n'
     for answer in answers[:-1]:
-        csv_output += answer['FreeText'] + ','
+        if answer['FreeText']:
+            csv_output += answer['FreeText'] + ','
     csv_output += answers[-1]['FreeText'] + '\n'
 
 print(csv_output)

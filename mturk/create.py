@@ -10,10 +10,10 @@ client = boto3.client('mturk',
 question = open('question.xml', 'r').read()
 
 new_hit = client.create_hit(
-    MaxAssignments=1,
+    MaxAssignments=10,
     AutoApprovalDelayInSeconds=0,
-    LifetimeInSeconds=1200,
-    AssignmentDurationInSeconds=600,
+    LifetimeInSeconds=3600,
+    AssignmentDurationInSeconds=1200,
     Reward='0.01',
     Title='Emotion and Robotics',
     Keywords='emotion, robotics',
