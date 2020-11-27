@@ -37,6 +37,18 @@ input {
   width: calc(100% - 20px);
 }
 
+.range {
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"] {
+  padding: 0;
+  margin: 10px;
+  margin-right: 20px;
+  width: 200px;
+}
+
 select {
   background: #fff;
   padding: 10px;

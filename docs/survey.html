@@ -8,206 +8,46 @@
   </head>
   <body>
     <form class="main" action="https://workersandbox.mturk.com/mturk/externalSubmit">
+
       <h4>Gender</h4>
-      <select>
-        <option class="disabled" value="location" disabled selected></option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Prefer not to disclose">Prefer not to disclose</option>
-      </select>
-      <h4>Age</h4>
-      <input type="number" name="age" />
-      <h4>Race</h4>
-      <select>
-        <option class="disabled" value="location" disabled selected></option>
-        <option value="american">American</option>	
-        <option value="asian">Asian</option>
+      <select name="de_gender" required>
+        <option class="disabled" value="" disabled selected></option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
         <option value="others">Others</option>
+        <option value="undisclosed">Prefer not to disclose</option>
       </select>
-      <h4 class="new-section">Please rate your impression of the robot on these scales.</h4>
-      <table>
-        <tr>
-          <td class="first-col">Fake</td>
-          <td><input type="radio" value="1" name="natural" /></td>
-          <td><input type="radio" value="2" name="natural" /></td>
-          <td><input type="radio" value="3" name="natural" /></td>
-          <td><input type="radio" value="4" name="natural" /></td>
-          <td><input type="radio" value="5" name="natural" /></td>
-          <td class="last-col">Natural</td>
-        </tr>
-        <tr>
-          <td class="first-col">Machine-Like</td>
-          <td><input type="radio" value="1" name="humanLike" /></td>
-          <td><input type="radio" value="2" name="humanLike" /></td>
-          <td><input type="radio" value="3" name="humanLike" /></td>
-          <td><input type="radio" value="4" name="humanLike" /></td>
-          <td><input type="radio" value="5" name="humanLike" /></td>
-          <td class="last-col">Human-Like</td>
-        </tr>
-        <tr>
-          <td class="first-col">Unconscious</td>
-          <td><input type="radio" value="1" name="conscious" /></td>
-          <td><input type="radio" value="2" name="conscious" /></td>
-          <td><input type="radio" value="3" name="conscious" /></td>
-          <td><input type="radio" value="4" name="conscious" /></td>
-          <td><input type="radio" value="5" name="conscious" /></td>
-          <td class="last-col">Conscious</td>
-        </tr>
-        <tr>
-          <td class="first-col">Artificial</td>
-          <td><input type="radio" value="1" name="lifelike" /></td>
-          <td><input type="radio" value="2" name="lifelike" /></td>
-          <td><input type="radio" value="3" name="lifelike" /></td>
-          <td><input type="radio" value="4" name="lLifelike" /></td>
-          <td><input type="radio" value="5" name="lifelike" /></td>
-          <td class="last-col">Lifelike</td>
-        </tr>
-        <tr>
-          <td class="first-col">Moving Ridigly</td>
-          <td><input type="radio" value="1" name="movingElegantly" /></td>
-          <td><input type="radio" value="2" name="movingElegantly" /></td>
-          <td><input type="radio" value="3" name="movingElegantly" /></td>
-          <td><input type="radio" value="4" name="movingElegantly" /></td>
-          <td><input type="radio" value="5" name="movingElegantly" /></td>
-          <td class="last-col">Moving Elegantly</td>
-        </tr>
-        <tr>
-          <td class="first-col">Dead</td>
-          <td><input type="radio" value="1" name="alive" /></td>
-          <td><input type="radio" value="2" name="alive" /></td>
-          <td><input type="radio" value="3" name="alive" /></td>
-          <td><input type="radio" value="4" name="alive" /></td>
-          <td><input type="radio" value="5" name="alive" /></td>
-          <td class="last-col">Alive</td>
-        </tr>
-        <tr>
-          <td class="first-col">Stagnant</td>
-          <td><input type="radio" value="1" name="lively" /></td>
-          <td><input type="radio" value="2" name="lively" /></td>
-          <td><input type="radio" value="3" name="lively" /></td>
-          <td><input type="radio" value="4" name="lively" /></td>
-          <td><input type="radio" value="5" name="lively" /></td>
-          <td class="last-col">Lively</td>
-        </tr>
-        <tr>
-          <td class="first-col">Mechanical</td>
-          <td><input type="radio" value="1" name="organic" /></td>
-          <td><input type="radio" value="2" name="organic" /></td>
-          <td><input type="radio" value="3" name="organic" /></td>
-          <td><input type="radio" value="4" name="organic" /></td>
-          <td><input type="radio" value="5" name="organic" /></td>
-          <td class="last-col">Organic</td>
-        </tr>
-        <tr>
-          <td class="first-col">Inert</td>
-          <td><input type="radio" value="1" name="interactive" /></td>
-          <td><input type="radio" value="2" name="interactive" /></td>
-          <td><input type="radio" value="3" name="interactive" /></td>
-          <td><input type="radio" value="4" name="interactive" /></td>
-          <td><input type="radio" value="5" name="interactive" /></td>
-          <td class="last-col">Interactive</td>
-        </tr>
-        <tr>
-          <td class="first-col">Apathetic</td>
-          <td><input type="radio" value="1" name="responsive" /></td>
-          <td><input type="radio" value="2" name="responsive" /></td>
-          <td><input type="radio" value="3" name="responsive" /></td>
-          <td><input type="radio" value="4" name="responsive" /></td>
-          <td><input type="radio" value="5" name="responsive" /></td>
-          <td class="last-col">Responsive</td>
-        </tr>
-        <tr>
-          <td class="first-col">Dislike</td>
-          <td><input type="radio" value="1" name="like" /></td>
-          <td><input type="radio" value="2" name="like" /></td>
-          <td><input type="radio" value="3" name="like" /></td>
-          <td><input type="radio" value="4" name="like" /></td>
-          <td><input type="radio" value="5" name="like" /></td>
-          <td class="last-col">Like</td>
-        </tr>
-        <tr>
-          <td class="first-col">Unfriendly</td>
-          <td><input type="radio" value="1" name="friendly" /></td>
-          <td><input type="radio" value="2" name="friendly" /></td>
-          <td><input type="radio" value="3" name="friendly" /></td>
-          <td><input type="radio" value="4" name="friendly" /></td>
-          <td><input type="radio" value="5" name="friendly" /></td>
-          <td class="last-col">Friendly</td>
-        </tr>
-        <tr>
-          <td class="first-col">Unkind</td>
-          <td><input type="radio" value="1" name="kind" /></td>
-          <td><input type="radio" value="2" name="kind" /></td>
-          <td><input type="radio" value="3" name="kind" /></td>
-          <td><input type="radio" value="4" name="kind" /></td>
-          <td><input type="radio" value="5" name="kind" /></td>
-          <td class="last-col">Kind</td>
-        </tr>
-        <tr>
-          <td class="first-col">Unpleasant</td>
-          <td><input type="radio" value="1" name="pleasant" /></td>
-          <td><input type="radio" value="2" name="pleasant" /></td>
-          <td><input type="radio" value="3" name="pleasant" /></td>
-          <td><input type="radio" value="4" name="pleasant" /></td>
-          <td><input type="radio" value="5" name="pleasant" /></td>
-          <td class="last-col">Pleasant</td>
-        </tr>
-        <tr>
-          <td class="first-col">Awful</td>
-          <td><input type="radio" value="1" name="nice" /></td>
-          <td><input type="radio" value="2" name="nice" /></td>
-          <td><input type="radio" value="3" name="nice" /></td>
-          <td><input type="radio" value="4" name="nice" /></td>
-          <td><input type="radio" value="5" name="nice" /></td>
-          <td class="last-col">Nice</td>
-        </tr>
-        <tr>
-          <td class="first-col">Incompetent</td>
-          <td><input type="radio" value="1" name="competent" /></td>
-          <td><input type="radio" value="2" name="competent" /></td>
-          <td><input type="radio" value="3" name="competent" /></td>
-          <td><input type="radio" value="4" name="competent" /></td>
-          <td><input type="radio" value="5" name="competent" /></td>
-          <td class="last-col">Competent</td>
-        </tr>
-        <tr>
-          <td class="first-col">Ignorant</td>
-          <td><input type="radio" value="1" name="knowledgeable" /></td>
-          <td><input type="radio" value="2" name="knowledgeable" /></td>
-          <td><input type="radio" value="3" name="knowledgeable" /></td>
-          <td><input type="radio" value="4" name="knowledgeable" /></td>
-          <td><input type="radio" value="5" name="knowledgeable" /></td>
-          <td class="last-col">Knowledgeable</td>
-        </tr>
-        <tr>
-          <td class="first-col">Irresponsible</td>
-          <td><input type="radio" value="1" name="responsible" /></td>
-          <td><input type="radio" value="2" name="responsible" /></td>
-          <td><input type="radio" value="3" name="responsible" /></td>
-          <td><input type="radio" value="4" name="responsible" /></td>
-          <td><input type="radio" value="5" name="responsible" /></td>
-          <td class="last-col">Responsible</td>
-        </tr>
-        <tr>
-          <td class="first-col">Unintelligent</td>
-          <td><input type="radio" value="1" name="intelligent" /></td>
-          <td><input type="radio" value="2" name="intelligent" /></td>
-          <td><input type="radio" value="3" name="intelligent" /></td>
-          <td><input type="radio" value="4" name="intelligent" /></td>
-          <td><input type="radio" value="5" name="intelligent" /></td>
-          <td class="last-col">Intelligent</td>
-        </tr>
-        <tr>
-          <td class="first-col">Foolish</td>
-          <td><input type="radio" value="1" name="sensible" /></td>
-          <td><input type="radio" value="2" name="sensible" /></td>
-          <td><input type="radio" value="3" name="sensible" /></td>
-          <td><input type="radio" value="4" name="sensible" /></td>
-          <td><input type="radio" value="5" name="sensible" /></td>
-          <td class="last-col">Sensible</td>
-        </tr>
-      </table>
-      <h4 class="new-section">Please rate what degree do you agree/disagree with the following statements.</h4>
+
+      <h4>Age</h4>
+      <input type="number" name="de_age" required />
+
+      <h4>Race</h4>
+      <select name="de_race" required>
+        <option value="" class="disabled" disabled selected></option>
+        <option value="caucasian">Caucasian</option>
+        <option value="africanamerican">African-American</option>
+        <option value="latinohispanic">Latino or Hispanic</option>
+        <option value="asian">Asian</option>
+        <option value="nativeamerican">Native American</option>
+        <option value="nativehawaiian">Native Hawaiian</option>
+        <option value="multiple">Two or More</option>
+        <option value="others">Other</option>
+        <option value="undisclosed">Prefer not to say</option>
+      </select>
+      
+      <h4>What emotion do you think the robot displayed when it malfunctioned?</h4>
+      <select name="ex_emotion" required>
+        <option value="" class="disabled" disabled selected></option>
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="fear">Fear</option>
+        <option value="anger">Anger</option>
+        <option value="disgust">Disgust</option>
+        <option value="surprise">Surprise</option>
+        <option value="neutral">Neutral</option>
+      </select>
+
+      <h4 class="new-section">Rate what degree to which you agree with these statements.</h4>
       <table>
         <tr>
           <th class="first-col"></th>
@@ -218,72 +58,487 @@
           <th>Strongly<br>Agree</th>
         </tr>
         <tr>
-          <td class="question-col">The system analyzes problems consistently.</td>
-          <td><input type="radio" value="1" name="analyzesConsitently" /></td>
-          <td><input type="radio" value="2" name="analyzesConsitently" /></td>
-          <td><input type="radio" value="3" name="analyzesConsitently" /></td>
-          <td><input type="radio" value="4" name="analyzesConsitently" /></td>
-          <td><input type="radio" value="5" name="analyzesConsitently" /></td>
+
+          <td class="question-col">The robot shows an appropriate emotion when it malfunctions.</td>
+          <td><input type="radio" value="1" name="ex_appropriate" required /></td>
+          <td><input type="radio" value="2" name="ex_appropriate" required /></td>
+          <td><input type="radio" value="3" name="ex_appropriate" required /></td>
+          <td><input type="radio" value="4" name="ex_appropriate" required /></td>
+          <td><input type="radio" value="5" name="ex_appropriate" required /></td>
         </tr>
         <tr>
-          <td class="question-col">The system responds the same way under the same conditions at different times.</td>
-          <td><input type="radio" value="1" name="respondsConsistently" /></td>
-          <td><input type="radio" value="2" name="respondsConsistently" /></td>
-          <td><input type="radio" value="3" name="respondsConsistently" /></td>
-          <td><input type="radio" value="4" name="respondsConsistently" /></td>
-          <td><input type="radio" value="5" name="respondsConsistently" /></td>
+          <td class="question-col">Without the robot's help, I would have taken a longer time to clear the dishes.</td>
+          <td><input type="radio" value="1" name="ex_time" required /></td>
+          <td><input type="radio" value="2" name="ex_time" required /></td>
+          <td><input type="radio" value="3" name="ex_time" required /></td>
+          <td><input type="radio" value="4" name="ex_time" required /></td>
+          <td><input type="radio" value="5" name="ex_time" required /></td>
         </tr>
         <tr>
-          <td class="question-col">I like using the system for decision making.</td>
-          <td><input type="radio" value="1" name="likeSystem" /></td>
-          <td><input type="radio" value="2" name="likeSystem" /></td>
-          <td><input type="radio" value="3" name="likeSystem" /></td>
-          <td><input type="radio" value="4" name="likeSystem" /></td>
-          <td><input type="radio" value="5" name="likeSystem" /></td>
+          <td class="question-col">I appreciate the help provided by the robot.</td>
+          <td><input type="radio" value="1" name="ex_appreciate" required /></td>
+          <td><input type="radio" value="2" name="ex_appreciate" required /></td>
+          <td><input type="radio" value="3" name="ex_appreciate" required /></td>
+          <td><input type="radio" value="4" name="ex_appreciate" required /></td>
+          <td><input type="radio" value="5" name="ex_appreciate" required /></td>
         </tr>
         <tr>
-          <td class="question-col">When the system provides assistance in an unusual manner, I am confident that it is correct.</td>
-          <td><input type="radio" value="1" name="unusualConfident" /></td>
-          <td><input type="radio" value="2" name="unusualConfident" /></td>
-          <td><input type="radio" value="3" name="unusualConfident" /></td>
-          <td><input type="radio" value="4" name="unusualConfident" /></td>
-          <td><input type="radio" value="5" name="unusualConfident" /></td>
+          <td class="question-col">I trust the robot.</td>
+          <td><input type="radio" value="1" name="ex_trust" required /></td>
+          <td><input type="radio" value="2" name="ex_trust" required /></td>
+          <td><input type="radio" value="3" name="ex_trust" required /></td>
+          <td><input type="radio" value="4" name="ex_trust" required /></td>
+          <td><input type="radio" value="5" name="ex_trust" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I believe the robot shares my goals. </td>
+          <td><input type="radio" value="1" name="ex_goal" required /></td>
+          <td><input type="radio" value="2" name="ex_goal" required /></td>
+          <td><input type="radio" value="3" name="ex_goal" required /></td>
+          <td><input type="radio" value="4" name="ex_goal" required /></td>
+          <td><input type="radio" value="5" name="ex_goal" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I would use the robot for this task again. </td>
+          <td><input type="radio" value="1" name="ex_again" required /></td>
+          <td><input type="radio" value="2" name="ex_again" required /></td>
+          <td><input type="radio" value="3" name="ex_again" required /></td>
+          <td><input type="radio" value="4" name="ex_again" required /></td>
+          <td><input type="radio" value="5" name="ex_again" required /></td>
         </tr>
       </table>
-      <h4>Assignment ID</h4>
-      <input id="assignmentId" readonly name="assignmentId" />
-      <h4>Timestamp 0</h4>
-      <input id="timestamp0" readonly name="timestamp0" />
-      <h4>From 0</h4>
-      <input id="from0" readonly name="from0" />
-      <h4>Timestamp 1</h4>
-      <input id="timestamp1" readonly name="timestamp1" />
-      <h4>From 1</h4>
-      <input id="from1" readonly name="from1" />
-      <h4>Timestamp 2</h4>
-      <input id="timestamp2" readonly name="timestamp2" />
-      <h4>From 2</h4>
-      <input id="from2" readonly name="from2" />
-      <h4>Timestamp 3</h4>
-      <input id="timestamp3" readonly name="timestamp3" />
-      <h4>From 3</h4>
-      <input id="from3" readonly name="from3" />
-      <h4>Timestamp 4</h4>
-      <input id="timestamp4" readonly name="timestamp4" />
-      <h4>From 4</h4>
-      <input id="from4" readonly name="from4" />
-      <h4>Timestamp 5</h4>
-      <input id="timestamp5" readonly name="timestamp5" />
-      <h4>From 5</h4>
-      <input id="from5" readonly name="from5" />
-      <h4>Emotion</h4>
-      <input id="emotion" readonly name="emotion" />
-      <h4>FPS</h4>
-      <input id="fps" readonly name="fps" />
+
+      <h4 class="new-section">Rate your impression of the robot on these scales.</h4>
+      <table>
+        <tr>
+          <td class="first-col">Fake</td>
+          <td><input type="radio" value="1" name="im_natural" required /></td>
+          <td><input type="radio" value="2" name="im_natural" required /></td>
+          <td><input type="radio" value="3" name="im_natural" required /></td>
+          <td><input type="radio" value="4" name="im_natural" required /></td>
+          <td><input type="radio" value="5" name="im_natural" required /></td>
+          <td class="last-col">Natural</td>
+        </tr>
+        <tr>
+          <td class="first-col">Machine-Like</td>
+          <td><input type="radio" value="1" name="im_humanlike" required /></td>
+          <td><input type="radio" value="2" name="im_humanlike" required /></td>
+          <td><input type="radio" value="3" name="im_humanlike" required /></td>
+          <td><input type="radio" value="4" name="im_humanlike" required /></td>
+          <td><input type="radio" value="5" name="im_humanlike" required /></td>
+          <td class="last-col">Human-Like</td>
+        </tr>
+        <tr>
+          <td class="first-col">Unconscious</td>
+          <td><input type="radio" value="1" name="im_conscious" required /></td>
+          <td><input type="radio" value="2" name="im_conscious" required /></td>
+          <td><input type="radio" value="3" name="im_conscious" required /></td>
+          <td><input type="radio" value="4" name="im_conscious" required /></td>
+          <td><input type="radio" value="5" name="im_conscious" required /></td>
+          <td class="last-col">Conscious</td>
+        </tr>
+        <tr>
+          <td class="first-col">Artificial</td>
+          <td><input type="radio" value="1" name="im_lifelike" required /></td>
+          <td><input type="radio" value="2" name="im_lifelike" required /></td>
+          <td><input type="radio" value="3" name="im_lifelike" required /></td>
+          <td><input type="radio" value="4" name="im_lifelike" required /></td>
+          <td><input type="radio" value="5" name="im_lifelike" required /></td>
+          <td class="last-col">Lifelike</td>
+        </tr>
+        <tr>
+          <td class="first-col">Moving Ridigly</td>
+          <td><input type="radio" value="1" name="im_movingelegantly" required /></td>
+          <td><input type="radio" value="2" name="im_movingelegantly" required /></td>
+          <td><input type="radio" value="3" name="im_movingelegantly" required /></td>
+          <td><input type="radio" value="4" name="im_movingelegantly" required /></td>
+          <td><input type="radio" value="5" name="im_movingelegantly" required /></td>
+          <td class="last-col">Moving Elegantly</td>
+        </tr>
+        <tr>
+          <td class="first-col">Dead</td>
+          <td><input type="radio" value="1" name="im_alive" required /></td>
+          <td><input type="radio" value="2" name="im_alive" required /></td>
+          <td><input type="radio" value="3" name="im_alive" required /></td>
+          <td><input type="radio" value="4" name="im_alive" required /></td>
+          <td><input type="radio" value="5" name="im_alive" required /></td>
+          <td class="last-col">Alive</td>
+        </tr>
+        <tr>
+          <td class="first-col">Stagnant</td>
+          <td><input type="radio" value="1" name="im_lively" required /></td>
+          <td><input type="radio" value="2" name="im_lively" required /></td>
+          <td><input type="radio" value="3" name="im_lively" required /></td>
+          <td><input type="radio" value="4" name="im_lively" required /></td>
+          <td><input type="radio" value="5" name="im_lively" required /></td>
+          <td class="last-col">Lively</td>
+        </tr>
+        <tr>
+          <td class="first-col">Mechanical</td>
+          <td><input type="radio" value="1" name="im_organic" required /></td>
+          <td><input type="radio" value="2" name="im_organic" required /></td>
+          <td><input type="radio" value="3" name="im_organic" required /></td>
+          <td><input type="radio" value="4" name="im_organic" required /></td>
+          <td><input type="radio" value="5" name="im_organic" required /></td>
+          <td class="last-col">Organic</td>
+        </tr>
+        <tr>
+          <td class="first-col">Inert</td>
+          <td><input type="radio" value="1" name="im_interactive" required /></td>
+          <td><input type="radio" value="2" name="im_interactive" required /></td>
+          <td><input type="radio" value="3" name="im_interactive" required /></td>
+          <td><input type="radio" value="4" name="im_interactive" required /></td>
+          <td><input type="radio" value="5" name="im_interactive" required /></td>
+          <td class="last-col">Interactive</td>
+        </tr>
+        <tr>
+          <td class="first-col">Apathetic</td>
+          <td><input type="radio" value="1" name="im_responsive" required /></td>
+          <td><input type="radio" value="2" name="im_responsive" required /></td>
+          <td><input type="radio" value="3" name="im_responsive" required /></td>
+          <td><input type="radio" value="4" name="im_responsive" required /></td>
+          <td><input type="radio" value="5" name="im_responsive" required /></td>
+          <td class="last-col">Responsive</td>
+        </tr>
+        <tr>
+          <td class="first-col">Dislike</td>
+          <td><input type="radio" value="1" name="im_like" required /></td>
+          <td><input type="radio" value="2" name="im_like" required /></td>
+          <td><input type="radio" value="3" name="im_like" required /></td>
+          <td><input type="radio" value="4" name="im_like" required /></td>
+          <td><input type="radio" value="5" name="im_like" required /></td>
+          <td class="last-col">Like</td>
+        </tr>
+        <tr>
+          <td class="first-col">Unfriendly</td>
+          <td><input type="radio" value="1" name="im_friendly" required /></td>
+          <td><input type="radio" value="2" name="im_friendly" required /></td>
+          <td><input type="radio" value="3" name="im_friendly" required /></td>
+          <td><input type="radio" value="4" name="im_friendly" required /></td>
+          <td><input type="radio" value="5" name="im_friendly" required /></td>
+          <td class="last-col">Friendly</td>
+        </tr>
+        <tr>
+          <td class="first-col">Unkind</td>
+          <td><input type="radio" value="1" name="im_kind" required /></td>
+          <td><input type="radio" value="2" name="im_kind" required /></td>
+          <td><input type="radio" value="3" name="im_kind" required /></td>
+          <td><input type="radio" value="4" name="im_kind" required /></td>
+          <td><input type="radio" value="5" name="im_kind" required /></td>
+          <td class="last-col">Kind</td>
+        </tr>
+        <tr>
+          <td class="first-col">Unpleasant</td>
+          <td><input type="radio" value="1" name="im_pleasant" required /></td>
+          <td><input type="radio" value="2" name="im_pleasant" required /></td>
+          <td><input type="radio" value="3" name="im_pleasant" required /></td>
+          <td><input type="radio" value="4" name="im_pleasant" required /></td>
+          <td><input type="radio" value="5" name="im_pleasant" required /></td>
+          <td class="last-col">Pleasant</td>
+        </tr>
+        <tr>
+          <td class="first-col">Awful</td>
+          <td><input type="radio" value="1" name="im_nice" required /></td>
+          <td><input type="radio" value="2" name="im_nice" required /></td>
+          <td><input type="radio" value="3" name="im_nice" required /></td>
+          <td><input type="radio" value="4" name="im_nice" required /></td>
+          <td><input type="radio" value="5" name="im_nice" required /></td>
+          <td class="last-col">Nice</td>
+        </tr>
+        <tr>
+          <td class="first-col">Incompetent</td>
+          <td><input type="radio" value="1" name="im_competent" required /></td>
+          <td><input type="radio" value="2" name="im_competent" required /></td>
+          <td><input type="radio" value="3" name="im_competent" required /></td>
+          <td><input type="radio" value="4" name="im_competent" required /></td>
+          <td><input type="radio" value="5" name="im_competent" required /></td>
+          <td class="last-col">Competent</td>
+        </tr>
+        <tr>
+          <td class="first-col">Ignorant</td>
+          <td><input type="radio" value="1" name="im_knowledgeable" required /></td>
+          <td><input type="radio" value="2" name="im_knowledgeable" required /></td>
+          <td><input type="radio" value="3" name="im_knowledgeable" required /></td>
+          <td><input type="radio" value="4" name="im_knowledgeable" required /></td>
+          <td><input type="radio" value="5" name="im_knowledgeable" required /></td>
+          <td class="last-col">Knowledgeable</td>
+        </tr>
+        <tr>
+          <td class="first-col">Irresponsible</td>
+          <td><input type="radio" value="1" name="im_responsible" required /></td>
+          <td><input type="radio" value="2" name="im_responsible" required /></td>
+          <td><input type="radio" value="3" name="im_responsible" required /></td>
+          <td><input type="radio" value="4" name="im_responsible" required /></td>
+          <td><input type="radio" value="5" name="im_responsible" required /></td>
+          <td class="last-col">Responsible</td>
+        </tr>
+        <tr>
+          <td class="first-col">Unintelligent</td>
+          <td><input type="radio" value="1" name="im_intelligent" required /></td>
+          <td><input type="radio" value="2" name="im_intelligent" required /></td>
+          <td><input type="radio" value="3" name="im_intelligent" required /></td>
+          <td><input type="radio" value="4" name="im_intelligent" required /></td>
+          <td><input type="radio" value="5" name="im_intelligent" required /></td>
+          <td class="last-col">Intelligent</td>
+        </tr>
+        <tr>
+          <td class="first-col">Foolish</td>
+          <td><input type="radio" value="1" name="im_sensible" required /></td>
+          <td><input type="radio" value="2" name="im_sensible" required /></td>
+          <td><input type="radio" value="3" name="im_sensible" required /></td>
+          <td><input type="radio" value="4" name="im_sensible" required /></td>
+          <td><input type="radio" value="5" name="im_sensible" required /></td>
+          <td class="last-col">Sensible</td>
+        </tr>
+      </table>
+
+      <h4 class="new-section">Rate the degree to which you agree with these statements.</h4>
+      <table>
+        <tr>
+          <th class="first-col"></th>
+          <th>Strongly<br>Disagree</th>
+          <th>Disagree</th>
+          <th>Neutral</th>
+          <th>Agree</th>
+          <th>Strongly<br>Agree</th>
+        </tr>
+        <tr>
+          <td class="question-col">I would feel uneasy if robots really had emotions.</td>
+          <td><input type="radio" value="1" name="so_emotion" required /></td>
+          <td><input type="radio" value="2" name="so_emotion" required /></td>
+          <td><input type="radio" value="3" name="so_emotion" required /></td>
+          <td><input type="radio" value="4" name="so_emotion" required /></td>
+          <td><input type="radio" value="5" name="so_emotion" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">Something bad might happen if robots developed into living begins.</td>
+          <td><input type="radio" value="1" name="so_bad" required /></td>
+          <td><input type="radio" value="2" name="so_bad" required /></td>
+          <td><input type="radio" value="3" name="so_bad" required /></td>
+          <td><input type="radio" value="4" name="so_bad" required /></td>
+          <td><input type="radio" value="5" name="so_bad" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I would feel relaxed talking with robots.</td>
+          <td><input type="radio" value="1" name="so_relax" required /></td>
+          <td><input type="radio" value="2" name="so_relax" required /></td>
+          <td><input type="radio" value="3" name="so_relax" required /></td>
+          <td><input type="radio" value="4" name="so_relax" required /></td>
+          <td><input type="radio" value="5" name="so_relax" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I would feel uneasy if I was given a job where I had to use robots.</td>
+          <td><input type="radio" value="1" name="so_job" required /></td>
+          <td><input type="radio" value="2" name="so_job" required /></td>
+          <td><input type="radio" value="3" name="so_job" required /></td>
+          <td><input type="radio" value="4" name="so_job" required /></td>
+          <td><input type="radio" value="5" name="so_job" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">If robots had emotions I would be able to make friends with them.</td>
+          <td><input type="radio" value="1" name="so_friend" required /></td>
+          <td><input type="radio" value="2" name="so_friend" required /></td>
+          <td><input type="radio" value="3" name="so_friend" required /></td>
+          <td><input type="radio" value="4" name="so_friend" required /></td>
+          <td><input type="radio" value="5" name="so_friend" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I feel comforted being with robots that have emotions.</td>
+          <td><input type="radio" value="1" name="so_comforted" required /></td>
+          <td><input type="radio" value="2" name="so_comforted" required /></td>
+          <td><input type="radio" value="3" name="so_comforted" required /></td>
+          <td><input type="radio" value="4" name="so_comforted" required /></td>
+          <td><input type="radio" value="5" name="so_comforted" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">The word "robot" means nothing to me.</td>
+          <td><input type="radio" value="1" name="so_meaningless" required /></td>
+          <td><input type="radio" value="2" name="so_meaningless" required /></td>
+          <td><input type="radio" value="3" name="so_meaningless" required /></td>
+          <td><input type="radio" value="4" name="so_meaningless" required /></td>
+          <td><input type="radio" value="5" name="so_meaningless" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I would feel nervous operating a robot in front of other people.</td>
+          <td><input type="radio" value="1" name="so_operating" required /></td>
+          <td><input type="radio" value="2" name="so_operating" required /></td>
+          <td><input type="radio" value="3" name="so_operating" required /></td>
+          <td><input type="radio" value="4" name="so_operating" required /></td>
+          <td><input type="radio" value="5" name="so_operating" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I would hate the idea that robots or artificial intelligences were making judgements about things.</td>
+          <td><input type="radio" value="1" name="so_judgement" required /></td>
+          <td><input type="radio" value="2" name="so_judgement" required /></td>
+          <td><input type="radio" value="3" name="so_judgement" required /></td>
+          <td><input type="radio" value="4" name="so_judgement" required /></td>
+          <td><input type="radio" value="5" name="so_judgement" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I would feel very nervous just standing in front of a robot.</td>
+          <td><input type="radio" value="1" name="so_nervous" required /></td>
+          <td><input type="radio" value="2" name="so_nervous" required /></td>
+          <td><input type="radio" value="3" name="so_nervous" required /></td>
+          <td><input type="radio" value="4" name="so_nervous" required /></td>
+          <td><input type="radio" value="5" name="so_nervous" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I feel that if I depend on robots too much, something bad might happen.</td>
+          <td><input type="radio" value="1" name="so_dependent" required /></td>
+          <td><input type="radio" value="2" name="so_dependent" required /></td>
+          <td><input type="radio" value="3" name="so_dependent" required /></td>
+          <td><input type="radio" value="4" name="so_dependent" required /></td>
+          <td><input type="radio" value="5" name="so_dependent" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I would feel paranoid talking with a robot.</td>
+          <td><input type="radio" value="1" name="so_paranoid" required /></td>
+          <td><input type="radio" value="2" name="so_paranoid" required /></td>
+          <td><input type="radio" value="3" name="so_paranoid" required /></td>
+          <td><input type="radio" value="4" name="so_paranoid" required /></td>
+          <td><input type="radio" value="5" name="so_paranoid" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I am concerned that robots would be a bad influence on children.</td>
+          <td><input type="radio" value="1" name="so_influence" required /></td>
+          <td><input type="radio" value="2" name="so_influence" required /></td>
+          <td><input type="radio" value="3" name="so_influence" required /></td>
+          <td><input type="radio" value="4" name="so_influence" required /></td>
+          <td><input type="radio" value="5" name="so_influence" required /></td>
+        </tr>
+        <tr>
+          <td class="question-col">I feel that in the future society will be dominated by robots.</td>
+          <td><input type="radio" value="1" name="so_dominated" required /></td>
+          <td><input type="radio" value="2" name="so_dominated" required /></td>
+          <td><input type="radio" value="3" name="so_dominated" required /></td>
+          <td><input type="radio" value="4" name="so_dominated" required /></td>
+          <td><input type="radio" value="5" name="so_dominated" required /></td>
+        </tr>
+      </table>
+      
+      <h4 class="new-section">What percentage of the time will this robot be reliable?</h4>
+      <div class="range">
+        <input type="range" name="ts_reliable" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot be predictable?</h4>
+      <div class="range">
+        <input type="range" name="ts_predictable" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot be dependable?</h4>
+      <div class="range">
+        <input type="range" name="ts_dependable" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot be unresponsive?</h4>
+      <div class="range">
+        <input type="range" name="ts_unresponsive" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot be malfunction?</h4>
+      <div class="range">
+        <input type="range" name="ts_malfunction" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot function successfully?</h4>
+      <div class="range">
+        <input type="range" name="ts_funsuc" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot act consistently?</h4>
+      <div class="range">
+        <input type="range" name="ts_actcon" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot follow directions?</h4>
+      <div class="range">
+        <input type="range" name="ts_follow" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot meet the needs of the task?</h4>
+      <div class="range">
+        <input type="range" name="ts_meetneeds" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot perform exactly as instructed?</h4>
+      <div class="range">
+        <input type="range" name="ts_performexactly" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot have errors?</h4>
+      <div class="range">
+        <input type="range" name="ts_errors" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot provide appropriate information?</h4>
+      <div class="range">
+        <input type="range" name="ts_appropriateinfo" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot provide feedback?</h4>
+      <div class="range">
+        <input type="range" name="ts_feedback" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <h4 class="new-section">What percentage of the time will this robot communicate with people?</h4>
+      <div class="range">
+        <input type="range" name="ts_communicate" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
+        <span>50%</span>
+      </div>
+
+      <div style="display: none;">
+        <h4>Assignment ID</h4>
+        <input id="assignmentId" readonly name="assignmentId" />
+        <h4>Timestamp 0</h4>
+        <input id="timestamp0" readonly name="timestamp0" />
+        <h4>From 0</h4>
+        <input id="from0" readonly name="from0" />
+        <h4>Timestamp 1</h4>
+        <input id="timestamp1" readonly name="timestamp1" />
+        <h4>From 1</h4>
+        <input id="from1" readonly name="from1" />
+        <h4>Timestamp 2</h4>
+        <input id="timestamp2" readonly name="timestamp2" />
+        <h4>From 2</h4>
+        <input id="from2" readonly name="from2" />
+        <h4>Timestamp 3</h4>
+        <input id="timestamp3" readonly name="timestamp3" />
+        <h4>From 3</h4>
+        <input id="from3" readonly name="from3" />
+        <h4>Timestamp 4</h4>
+        <input id="timestamp4" readonly name="timestamp4" />
+        <h4>From 4</h4>
+        <input id="from4" readonly name="from4" />
+        <h4>Timestamp 5</h4>
+        <input id="timestamp5" readonly name="timestamp5" />
+        <h4>From 5</h4>
+        <input id="from5" readonly name="from5" />
+        <h4>Emotion</h4>
+        <input id="emotion" readonly name="emotion" />
+        <h4>FPS</h4>
+        <input id="fps" readonly name="fps" />
+      </div>
+      
       <div class="btn-block">
         <button type="submit" href="/">Submit</button>
       </div>
+
     </form>
+
     <script>
       function get(name){
         if (name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search)) {
