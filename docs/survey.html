@@ -19,7 +19,7 @@
       </select>
 
       <h4>Age</h4>
-      <input type="number" name="de_age" required />
+      <input type="number" name="de_age" min="18" max="99" required />
 
       <h4>Race</h4>
       <select name="de_race" required>
@@ -147,7 +147,7 @@
           <td class="last-col">Lifelike</td>
         </tr>
         <tr>
-          <td class="first-col">Moving Ridigly</td>
+          <td class="first-col">Moving Rigidly</td>
           <td><input type="radio" value="1" name="im_movingelegantly" required /></td>
           <td><input type="radio" value="2" name="im_movingelegantly" required /></td>
           <td><input type="radio" value="3" name="im_movingelegantly" required /></td>
@@ -367,12 +367,12 @@
           <td><input type="radio" value="5" name="so_operating" required /></td>
         </tr>
         <tr>
-          <td class="question-col">I would hate the idea that robots or artificial intelligences were making judgements about things.</td>
-          <td><input type="radio" value="1" name="so_judgement" required /></td>
-          <td><input type="radio" value="2" name="so_judgement" required /></td>
-          <td><input type="radio" value="3" name="so_judgement" required /></td>
-          <td><input type="radio" value="4" name="so_judgement" required /></td>
-          <td><input type="radio" value="5" name="so_judgement" required /></td>
+          <td class="question-col">I would hate the idea that robots or artificial intelligences were making judgments about things.</td>
+          <td><input type="radio" value="1" name="so_judgment" required /></td>
+          <td><input type="radio" value="2" name="so_judgment" required /></td>
+          <td><input type="radio" value="3" name="so_judgment" required /></td>
+          <td><input type="radio" value="4" name="so_judgment" required /></td>
+          <td><input type="radio" value="5" name="so_judgment" required /></td>
         </tr>
         <tr>
           <td class="question-col">I would feel very nervous just standing in front of a robot.</td>
@@ -416,89 +416,220 @@
         </tr>
       </table>
       
-      <h4 class="new-section">What percentage of the time will this robot be reliable?</h4>
-      <div class="range">
-        <input type="range" name="ts_reliable" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot be predictable?</h4>
-      <div class="range">
-        <input type="range" name="ts_predictable" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot be dependable?</h4>
-      <div class="range">
-        <input type="range" name="ts_dependable" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot be unresponsive?</h4>
-      <div class="range">
-        <input type="range" name="ts_unresponsive" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot be malfunction?</h4>
-      <div class="range">
-        <input type="range" name="ts_malfunction" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot function successfully?</h4>
-      <div class="range">
-        <input type="range" name="ts_funsuc" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot act consistently?</h4>
-      <div class="range">
-        <input type="range" name="ts_actcon" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot follow directions?</h4>
-      <div class="range">
-        <input type="range" name="ts_follow" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot meet the needs of the task?</h4>
-      <div class="range">
-        <input type="range" name="ts_meetneeds" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot perform exactly as instructed?</h4>
-      <div class="range">
-        <input type="range" name="ts_performexactly" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot have errors?</h4>
-      <div class="range">
-        <input type="range" name="ts_errors" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot provide appropriate information?</h4>
-      <div class="range">
-        <input type="range" name="ts_appropriateinfo" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot provide feedback?</h4>
-      <div class="range">
-        <input type="range" name="ts_feedback" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
-
-      <h4 class="new-section">What percentage of the time will this robot communicate with people?</h4>
-      <div class="range">
-        <input type="range" name="ts_communicate" min="0" max="100" value="50" step="10" oninput="this.nextElementSibling.innerHTML = this.value + '%'">
-        <span>50%</span>
-      </div>
+      <h4 class="new-section">Rate what percentage of the time will this robot display the following attributes.</h4>
+      <table>
+        <tr>
+          <th class="percentage-col" style="text-align: center;"></th>
+          <th class="percentage-col" style="text-align: center;">0%</th>
+          <th class="percentage-col" style="text-align: center;">10%</th>
+          <th class="percentage-col" style="text-align: center;">20%</th>
+          <th class="percentage-col" style="text-align: center;">30%</th>
+          <th class="percentage-col" style="text-align: center;">40%</th>
+          <th class="percentage-col" style="text-align: center;">50%</th>
+          <th class="percentage-col" style="text-align: center;">60%</th>
+          <th class="percentage-col" style="text-align: center;">70%</th>
+          <th class="percentage-col" style="text-align: center;">80%</th>
+          <th class="percentage-col" style="text-align: center;">90%</th>
+          <th class="percentage-col" style="text-align: center;">100%</th>
+        </tr>
+        <tr>
+          <td class="percentage-col">Be reliable</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_reliable" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_reliable" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Be predictable</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_predictable" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_predictable" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Be dependable</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_dependable" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_dependable" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Be unresponsive</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_unresponsive" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_unresponsive" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Be malfunction</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_malfunction" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_malfunction" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Function successfully</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_funsuc" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_funsuc" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Act consistently</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_actcon" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_actcon" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Follow directions</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_follow" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_follow" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Meet the needs of the task</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_meetneeds" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_meetneeds" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Perform exactly as instructed</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_performexactly" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_performexactly" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Have errors</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_errors" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_errors" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Provide appropriate information</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_appropriateinfo" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_appropriateinfo" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Provide feedback</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_feedback" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_feedback" required /></td>
+        </tr>
+        <tr>
+          <td class="percentage-col">Communicate with people</td>
+          <td><input class="percentage-col" type="radio" value="0" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="10" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="20" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="30" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="40" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="50" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="60" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="70" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="80" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="90" name="ts_communicate" required /></td>
+          <td><input class="percentage-col" type="radio" value="100" name="ts_communicate" required /></td>
+        </tr>
+        
+      </table>
 
       <div style="display: none;">
         <h4>Assignment ID</h4>
