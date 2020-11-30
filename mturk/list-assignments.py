@@ -19,12 +19,15 @@ csv_output = ''
 for assignment in assignments:
     answers = xmltodict.parse(assignment['Answer'])['QuestionFormAnswers']['Answer']
     if not csv_output:
+        csv_output += 'de_assignmentid,de_workerid,de_hitid,'
         for answer in answers[:-1]:
             csv_output += answer['QuestionIdentifier'] + ','
         csv_output += answers[-1]['QuestionIdentifier'] + '\n'
+    csv_output += assignment['AssignmentId'] + ','
+    csv_output += assignment['WorkerId'] + ','
+    csv_output += assignment['HITId'] + ','
     for answer in answers[:-1]:
-        if answer['FreeText']:
-            csv_output += answer['FreeText'] + ','
+        csv_output += answer['FreeText'] + ','
     csv_output += answers[-1]['FreeText'] + '\n'
 
 print(csv_output)

@@ -21,7 +21,7 @@ new_hit = client.create_hit(
     Title='Research on Human-Robot Interaction',
     Keywords='hri, human, robotics, interaction',
     Description='In this HIT, you will be interacting with a virtual robot and answering some questions about your experience. This HIT will take approximately 15 to 20 minutes to complete.',
-    QualificationRequirements=[{'QualificationTypeId': master_qualification[config.stage], 'Comparator': 'Exists', 'RequiredToPreview': True}],
+    # QualificationRequirements=[{'QualificationTypeId': master_qualification[config.stage], 'Comparator': 'Exists', 'RequiredToPreview': True}],
     Question=question
 )
 
@@ -30,4 +30,4 @@ print("A new HIT has been created. You can preview it here:")
 if config.stage == 'Sandbox':
     print("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
 
-("HITID = " + new_hit['HIT']['HITId'] + " (Use to Get Results)")
+print("HITID = " + new_hit['HIT']['HITId'] + " (Use to Get Results)")
