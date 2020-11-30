@@ -10,4 +10,6 @@ client = boto3.client('mturk',
     region_name='us-east-1',
     endpoint_url=endpoint_url[config.stage])
 
-print(client.list_hits())
+for hit in client.list_hits()['HITs']:
+    print(hit)
+    print()

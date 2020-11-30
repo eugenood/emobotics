@@ -13,15 +13,16 @@ client = boto3.client('mturk',
 question = open('question.xml', 'r').read()
 
 new_hit = client.create_hit(
-    MaxAssignments=30,
+    MaxAssignments=9,
     AutoApprovalDelayInSeconds=0,
     LifetimeInSeconds=36000,
     AssignmentDurationInSeconds=3600,
     Reward='3.00',
     Title='Research on Human-Robot Interaction',
     Keywords='hri, human, robotics, interaction',
-    Description='In this HIT, you will be interacting with a virtual robot and answering some questions about your experience. This HIT will take approximately 15 to 20 minutes to complete.',
-    # QualificationRequirements=[{'QualificationTypeId': master_qualification[config.stage], 'Comparator': 'Exists', 'RequiredToPreview': True}],
+    Description='In this HIT, you will be interacting with a virtual robot and answering some questions about your experience. This HIT will take approximately 10 to 15 minutes to complete.',
+    QualificationRequirements=[{'QualificationTypeId': master_qualification[config.stage], 'Comparator': 'Exists', 'RequiredToPreview': True},
+      {'QualificationTypeId': '3V75YMGIE33CXT3FJ5IHLYJSIK0N4D', 'Comparator': 'DoesNotExist'}],
     Question=question
 )
 
