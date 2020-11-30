@@ -27,7 +27,10 @@ for assignment in assignments:
     csv_output += assignment['WorkerId'] + ','
     csv_output += assignment['HITId'] + ','
     for answer in answers[:-1]:
-        csv_output += answer['FreeText'] + ','
+        if answer['FreeText']:
+            csv_output += answer['FreeText'] + ','
+        else:
+            csv_output += ','
     csv_output += answers[-1]['FreeText'] + '\n'
 
 print(csv_output)
