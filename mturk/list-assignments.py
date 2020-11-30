@@ -4,11 +4,13 @@ import datetime
 import sys
 import xmltodict
 
+endpoint_url = {'Sandbox': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com', 'Production': 'https://mturk-requester.us-east-1.amazonaws.com'}
+
 client = boto3.client('mturk',
     aws_access_key_id=config.aws_access_key_id,
     aws_secret_access_key=config.aws_secret_access_key,
     region_name='us-east-1',
-    endpoint_url='https://mturk-requester-sandbox.us-east-1.amazonaws.com')
+    endpoint_url=endpoint_url[stage])
 
 assignments = client.list_assignments_for_hit(HITId=sys.argv[1])['Assignments']
 
