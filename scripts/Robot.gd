@@ -6,14 +6,18 @@ enum Emotion { NONE, SAD, WINK }
 
 export(NodePath) var hand_spatial_path
 export(NodePath) var sink_path
+export(NodePath) var instruction_path
 
 onready var robot_animation = $RobotAnimation
 onready var click_audio = $ClickAudio
 onready var failing_audio = $FailingAudio
+onready var wait_timer = $WaitTimer
+onready var fixing_status = $FixingStatus
 onready var robot_emote = $RobotMesh/Hook/Screen/RobotEmote
 
 onready var hand_spatial = get_node(hand_spatial_path)
 onready var sink = get_node(sink_path)
+onready var instruction = get_node(instruction_path)
 
 var none_emote = preload("res://images/emotes/None.png")
 var sad_emote = preload("res://images/emotes/Sad.png")
@@ -32,6 +36,7 @@ func _ready():
 	failed_emotion = emotion_options[randi() % 3]
 	robot_animation.connect("animation_finished", self, "_on_animation_finished")
 	robot_animation.connect("animation_started", self, "_on_animation_started")
+	wait_timer.connect("timeout", self, "release")
 
 func _on_animation_started(anim_name):
 	if anim_name == "failing":
@@ -86,6 +91,12 @@ func _deliver_for(human):
 	robot_animation.play("delivering")
 
 func _fixed_by(human):
+	human.wait(5)
+	wait_timer.wait_time = 5
+	instruction.text = "Fixing in progress..." 
+	wait_timer.start()
+
+func release():
 	robot_animation.play("succeeding")
 	failing_audio.stop()
 	is_failing = false
