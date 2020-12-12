@@ -91,8 +91,8 @@ func _deliver_for(human):
 	robot_animation.play("delivering")
 
 func _fixed_by(human):
-	human.wait(5)
-	wait_timer.wait_time = 5
+	human.wait(8)
+	wait_timer.wait_time = 8
 	instruction.text = "Fixing in progress..." 
 	wait_timer.start()
 
