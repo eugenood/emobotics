@@ -1,4 +1,4 @@
-# Emobotics
+# emobotics
 
 An experimental study exploring how imbuing robots with perceived emotions influences human behavior. This project uses a **Godot** environment to measure changes in user interaction based on the robot's emotional state.
 
